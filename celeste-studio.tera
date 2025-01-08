@@ -1,0 +1,75 @@
+---
+whiskers:
+  version: "2.5.1"
+  matrix:
+    - variant: ["normal", "no-italics"]
+    - flavor
+    - accent
+  filename: "themes/{{ flavor.identifier }}/catppuccin-{{ flavor.identifier }}-{{ accent }}-{{ variant }}.toml"
+  hex_format: "#{{ A }}{{ R }}{{ G }}{{ B }}"
+---
+
+{%- macro tenth(color) -%}
+{{- color | mod(opacity=0.1) | get(key="hex") -}}
+{%- endmacro tenth -%}
+
+{%- macro third(color) -%}
+{{- color | mod(opacity=0.3) | get(key="hex") -}}
+{%- endmacro third -%}
+
+{%- macro fourth(color) -%}
+{{- color | mod(opacity=0.25) | get(key="hex") -}}
+{%- endmacro fourth -%}
+
+{%- set accent = flavor.colors[accent] -%}
+[CustomThemes."Catppuccin {{ flavor.name }} - {{ accent.name }}
+{%- if variant == "no-italics" %} (no italics){% endif -%}
+"]
+Background = "{{ base.hex }}"
+Caret = "{{ text.hex }}"
+CurrentLine = "{{ self::tenth(color=surface2) }}"
+LineNumber = "{{ subtext0.hex }}"
+PlayingFrame = "{{ yellow.hex }}"
+PlayingLineFg = "{{ text.hex }}"
+PlayingLineBg = "{{ self::third(color=accent) }}"
+Selection = "{{ self::fourth(color=overlay2) }}"
+SavestateFg = "{{ text.hex }}"
+SavestateBg = "{{ self::third(color=blue) }}"
+ServiceLine = "{{ surface0.hex }}"
+StatusFg = "{{ text.hex }}"
+StatusBg = "{{ mantle.hex }}"
+CalculateFg = "{{ surface0.hex }}"
+CalculateBg = "{{ blue.hex }}"
+PopoutButtonBg = "{{ surface0.hex }}"
+PopoutButtonHovered = "{{ surface1.hex }}"
+PopoutButtonSelected = "{{ surface2.hex }}"
+SubpixelIndicatorBox = "{{ green.hex }}"
+SubpixelIndicatorDot = "{{ red.hex }}"
+PopupMenuFg = "{{ text.hex }}"
+PopupMenuFgDisabled = "{{ surface0.hex }}"
+PopupMenuFgExtra = "{{ overlay1.hex }}"
+PopupMenuBg = "{{ surface0.hex }}"
+PopupMenuSelected = "{{ self::fourth(color=accent) }}"
+
+PopupMenuBorderPadding = 5
+PopupMenuBorderRounding = 6.0
+PopupMenuEntryHorizontalPadding = 5
+PopupMenuEntryVerticalPadding = 5
+PopupMenuEntrySpacing = 1
+PopupMenuEntryRounding = 5.0
+
+Action = { ForegroundColor = "{{ sky.hex }}", FontStyle = "None" }
+Angle = { ForegroundColor = "{{ pink.hex }}", FontStyle = "None" }
+Breakpoint = { ForegroundColor = "{{ surface0.hex }}", BackgroundColor = "{{ red.hex }}", FontStyle = "Bold" }
+SavestateBreakpoint = { ForegroundColor = "{{ surface0.hex }}", BackgroundColor = "{{ sapphire.hex }}", FontStyle = "Bold" }
+Delimiter = { ForegroundColor = "{{ subtext1.hex }}", FontStyle = "None" }
+Command = { ForegroundColor = "{{ peach.hex }}", FontStyle = "None" }
+Frame = { ForegroundColor = "{{ mauve.hex }}", FontStyle = "None" }
+Comment = { ForegroundColor = "{{ overlay2.hex }}", FontStyle = "
+{%- if variant == "no-italics" -%}
+None
+{%- else -%}
+Italic
+{%- endif -%}
+" }
+DarkMode = {{ flavor.dark }}

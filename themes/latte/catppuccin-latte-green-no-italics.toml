@@ -1,0 +1,43 @@
+[CustomThemes."Catppuccin Latte - Green (no italics)"]
+Background = "#FFEFF1F5"
+Caret = "#FF4C4F69"
+CurrentLine = "#1AACB0BE"
+LineNumber = "#FF6C6F85"
+PlayingFrame = "#FFDF8E1D"
+PlayingLineFg = "#FF4C4F69"
+PlayingLineBg = "#4D40A02B"
+Selection = "#407C7F93"
+SavestateFg = "#FF4C4F69"
+SavestateBg = "#4D1E66F5"
+ServiceLine = "#FFCCD0DA"
+StatusFg = "#FF4C4F69"
+StatusBg = "#FFE6E9EF"
+CalculateFg = "#FFCCD0DA"
+CalculateBg = "#FF1E66F5"
+PopoutButtonBg = "#FFCCD0DA"
+PopoutButtonHovered = "#FFBCC0CC"
+PopoutButtonSelected = "#FFACB0BE"
+SubpixelIndicatorBox = "#FF40A02B"
+SubpixelIndicatorDot = "#FFD20F39"
+PopupMenuFg = "#FF4C4F69"
+PopupMenuFgDisabled = "#FFCCD0DA"
+PopupMenuFgExtra = "#FF8C8FA1"
+PopupMenuBg = "#FFCCD0DA"
+PopupMenuSelected = "#4040A02B"
+
+PopupMenuBorderPadding = 5
+PopupMenuBorderRounding = 6.0
+PopupMenuEntryHorizontalPadding = 5
+PopupMenuEntryVerticalPadding = 5
+PopupMenuEntrySpacing = 1
+PopupMenuEntryRounding = 5.0
+
+Action = { ForegroundColor = "#FF04A5E5", FontStyle = "None" }
+Angle = { ForegroundColor = "#FFEA76CB", FontStyle = "None" }
+Breakpoint = { ForegroundColor = "#FFCCD0DA", BackgroundColor = "#FFD20F39", FontStyle = "Bold" }
+SavestateBreakpoint = { ForegroundColor = "#FFCCD0DA", BackgroundColor = "#FF209FB5", FontStyle = "Bold" }
+Delimiter = { ForegroundColor = "#FF5C5F77", FontStyle = "None" }
+Command = { ForegroundColor = "#FFFE640B", FontStyle = "None" }
+Frame = { ForegroundColor = "#FF8839EF", FontStyle = "None" }
+Comment = { ForegroundColor = "#FF7C7F93", FontStyle = "None" }
+DarkMode = false
