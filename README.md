@@ -40,7 +40,7 @@
 2. Close CelesteTAS Studio to prevent it from overwriting the settings file.
 3. Open the [theme for your preferred flavor](themes/) and copy the entire file.
 4. Paste the contents of the theme file into the settings file after the `[CustomThemes]` line.
-  - If you don't have a `[CustomThemes]` line, add it at the end of the file before pasting the theme.
+    - If you don't have a `[CustomThemes]` line, add it at the end of the file before pasting the theme.
 5. Save the settings file and reopen CelesteTAS Studio.
 6. Go to `Settings` > `Theme` and select the theme you added.
 
